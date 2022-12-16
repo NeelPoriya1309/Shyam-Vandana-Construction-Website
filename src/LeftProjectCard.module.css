@@ -1,0 +1,38 @@
+.project-card {
+  width: 60%;
+  margin: 0 auto;
+}
+.project-title {
+  font-size: 1.3rem;
+  color: #000;
+  margin: 60px 0px 40px 0;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.project-details {
+  display: flex;
+}
+.project-image {
+  width: 40%;
+}
+.project-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+.project-description {
+  width: 60%;
+  margin-left: 40px;
+  font-size: 1rem;
+  color: #000;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.project-description ul {
+  list-style: none;
+}
+.project-description ul li {
+  margin: 10px 0px;
+  font-size: 1.3rem;
+}

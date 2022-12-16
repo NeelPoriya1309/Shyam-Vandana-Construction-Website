@@ -1,34 +1,87 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from 'react';
+import styles from './App.module.css';
+import ProjectCard from './RightProjectCard';
+import LeftProjectCard from './LeftProjectCard';
+import AboutUs from './AboutUs';
+import ContactUs from './ContactUs';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <>
+      {/* Navbar */}
+      <nav>
+        <ul className={styles['nav-links']}>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="">
+              <img className={styles['logo']} src="./../public/logo.png"></img>
+            </a>
+          </li>
+          <li>
+            <a href="#project">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Header */}
+
+      <div className={styles['hero-text']}>
+        <h1 className={styles['title-heading']}>
+          SHYAM<br></br> VANDANA<br></br> CONSTRUCTION
+        </h1>
+        <p className={styles['title-subheading']}>
+          We are a team of professionals with over 20 years of experience in
+          construction and development. We are committed to providing the best
+          quality construction services to our clients.
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+
+      {/* Contact Section */}
+
+      <section id="about" className={styles['about']}>
+        <div className={styles['title']}>
+          <h2>About Us</h2>
+          <div className={styles['bar']}></div>
+        </div>
+        <AboutUs />
+      </section>
+
+      {/* Project Section */}
+
+      <section
+        id="project"
+        style={{ backgroundColor: 'rgba(255, 220, 179, 0.2)' }}
+        className={styles['projects']}
+      >
+        <div className={styles['title']}>
+          <h2>Recent Projects</h2>
+          <div className={styles['bar']}></div>
+        </div>
+        <LeftProjectCard />
+        <ProjectCard />
+        <LeftProjectCard />
+        <ProjectCard />
+      </section>
+
+      {/* Contact Section */}
+
+      <section id="contact" className={styles['contact']}>
+        <div className={styles['title']}>
+          <h2>Contact Us</h2>
+          <div className={styles['bar']}></div>
+        </div>
+        <ContactUs />
+      </section>
+    </>
+  );
 }
 
-export default App
+export default App;
