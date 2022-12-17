@@ -17,3 +17,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+@media screen and (max-width: 1500px) {
+  :root {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,32 @@
+.container {
+  width: 70%;
+  margin: 20px 15%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+  background-color: #fff8f0;
+  /* border: 2px solid #c8ae71; */
+  box-shadow: 5px 5px #c8ae7199;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.contact-name {
+  margin: 20px 0 5px 0;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.contact-mobile {
+  font-size: 120%;
+}

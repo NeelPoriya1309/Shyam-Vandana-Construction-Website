@@ -38,9 +38,10 @@ function App() {
           SHYAM<br></br> VANDANA<br></br> CONSTRUCTION
         </h1>
         <p className={styles['title-subheading']}>
-          We are a team of professionals with over 20 years of experience in
-          construction and development. We are committed to providing the best
-          quality construction services to our clients.
+          We are a team of professionals with over{' '}
+          {new Date().getFullYear() - 2012} years of experience in construction
+          and development. We are committed to providing the best quality
+          construction services to our clients.
         </p>
       </div>
 
@@ -80,6 +81,13 @@ function App() {
         </div>
         <ContactUs />
       </section>
+
+      <footer>
+        <p className={styles['footer-company']}>Shyam Vandana Construction</p>
+        <p className={styles['footer-copyrights']}>
+          Copyright &#169; {new Date().getFullYear()} All rights resereved
+        </p>
+      </footer>
     </>
   );
 }
