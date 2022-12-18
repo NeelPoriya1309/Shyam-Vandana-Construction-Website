@@ -38,3 +38,33 @@
   margin: 10px 0px;
   font-size: 1.3rem;
 }
+
+@media screen and (max-width: 1500px) {
+  .project-card {
+    margin: 0;
+    width: 100%;
+  }
+  .project-details {
+    display: block;
+  }
+
+  .project-image {
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .project-title {
+    font-size: 100%;
+    margin: 10px 0;
+  }
+
+  .project-description {
+    margin: 0;
+    width: 100%;
+  }
+
+  .project-description ul li {
+    margin: 10px 0px;
+    font-size: 100%;
+  }
+}

@@ -6,16 +6,35 @@ import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 
 function App() {
+  let projectCards = (
+    <>
+      <LeftProjectCard />
+      <ProjectCard />
+      <LeftProjectCard />
+      <ProjectCard />
+    </>
+  );
+
+  if (screen.width < 1500) {
+    projectCards = (
+      <>
+        <LeftProjectCard />
+        <LeftProjectCard />
+        <LeftProjectCard />
+        <LeftProjectCard />
+      </>
+    );
+  }
   return (
     <>
       {/* Navbar */}
       <nav>
         <ul className={styles['nav-links']}>
           <li>
-            <a href="#home">Home</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#project">Projects</a>
           </li>
           <li>
             <a href="">
@@ -23,10 +42,17 @@ function App() {
             </a>
           </li>
           <li>
-            <a href="#project">Projects</a>
+            <a href="#contact">Contact</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a
+              href="/gallery"
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            >
+              Gallery
+            </a>
           </li>
         </ul>
       </nav>
@@ -66,10 +92,7 @@ function App() {
           <h2>Recent Projects</h2>
           <div className={styles['bar']}></div>
         </div>
-        <LeftProjectCard />
-        <ProjectCard />
-        <LeftProjectCard />
-        <ProjectCard />
+        {projectCards}
       </section>
 
       {/* Contact Section */}
